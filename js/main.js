@@ -26,3 +26,36 @@ document.querySelector('.list').innerHTML += text;
 document.querySelector('.list').innerHTML += text;
 document.querySelector('.list').innerHTML += text;
 document.querySelector('.list').innerHTML += text;
+
+const menuButton = document.querySelector('.acImg');
+let menuButtonFunction = 'X';
+
+function navigationButton() {
+    if (menuButtonFunction == 'X') {
+        document.querySelector('.overlay').style.display = "block";
+        document.getElementById("mySidenav").style.width = "300px";
+        menuButton.classList.toggle("change");
+        menuButtonFunction = 'O';
+    } else if (menuButtonFunction = 'O') {
+        document.getElementById("mySidenav").style.width = "0";
+        document.querySelector('.overlay').style.display = "none";
+        menuButton.classList.toggle("change");
+        menuButtonFunction = 'X';
+    }
+}
+
+//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}

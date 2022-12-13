@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+
+    <div class="overlay"></div>
+
     <header>
         <h1>Project SN</h1>
         <form class="example" action="action_page.php">
@@ -18,8 +22,18 @@
             <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
         </form>
         <button>LOGIN</button>
-        <img src="img/1946428.png" alt="Account Settings" class="acImg">
+        <img src="img/1946428.png" alt="Account Settings" class="acImg" onclick="navigationButton()">
     </header>
+
+    <div id="mySidenav" class="sidenav">
+        <img src="img/67044d.png" alt="Cancel" class="cancelButton" onclick="navigationButton()">
+        <a href="#">Account</a>
+        <a href="#">Settings</a>
+        <a href="#">My Posts</a>
+        <a href="#">Replies</a>
+        <a href="#">Saved Posts</a>
+    </div>
+
     <div class="list">
         <div class="pwr">
             <article>
