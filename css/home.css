@@ -5,6 +5,27 @@ body {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A1A1B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #343536;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a3b3c;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #4e5152;
+}
+
 header {
     height: 80px;
     width: 100%;
@@ -16,21 +37,41 @@ header {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    padding-top: 20px;
+}
+
+button {
+    background-color: #1A1A1B;
+    color: white;
+    border: 1px solid #343536;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    width: 100px;
+    vertical-align: middle;
+}
+
+button:hover{
+    background-color: #39393c;
+}
+
+button:active{
+    background-color: #303032;
 }
 
 h1 {
     margin-left: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .acImg {
     width: 40px;
-    margin-top: 20px;
 }
 
 .pwr {
     margin: auto;
-    width: 800px;
+    width: 700px;
     background-color: #1A1A1B;
     border: 1px solid #343536;
     border-radius: 4px;
@@ -43,7 +84,41 @@ article {
     position: relative;
     /* overflow: hidden; */
     padding-bottom: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
+}
+
+.sideArtc {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    left: 11px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.pfp {
+    width: 30px;
+}
+
+.like {
+    width: 20px;
+    margin-left: 4px;
+    margin-top: 15px;
+}
+
+.likeCount {
+    font-size: 12pt;
+    margin-left: 5px;
+}
+
+.dislike {
+    width: 22px;
+    margin-left: 2px;
+}
+
+.dislikeCount {
+    font-size: 12pt;
+    margin-left: 5px;
 }
 
 p {
@@ -77,7 +152,7 @@ article:after {
 
 .rmt {
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     color: #6F8FAF;
     font-size: 11pt;
     bottom: 1px;
@@ -92,8 +167,8 @@ form.example input[type=text] {
     width: 700px;
     background: #1A1A1B;
     border-radius: 20px;
-    margin-top: 20px;
     margin-left: 30px;
+    color: white;
 }
 
 /* Style the submit button */
