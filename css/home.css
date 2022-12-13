@@ -1,21 +1,31 @@
 body {
     background-color: black;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     height: 80px;
-    width: 1920px;
+    width: 100%;
     margin-top: -20px;
     background-color: #1A1A1B;
     border-bottom: 1px solid #343536;
     display: inline-flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
+    align-content: center;
 }
 
 h1 {
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.acImg {
+    width: 40px;
+    margin-top: 20px;
 }
 
 .pwr {
@@ -26,6 +36,14 @@ h1 {
     border-radius: 4px;
     border-top-right-radius: 0px;
     margin-top: 25px;
+}
+
+article {
+    max-height: 170px;
+    position: relative;
+    /* overflow: hidden; */
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 
 p {
@@ -45,16 +63,37 @@ h3 {
     display: none;
 }
 
+article:after {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    height: 80%;
+    width: 95%;
+    content: "";
+    background: linear-gradient(to top,
+            #1A1A1B 25%,
+            rgba(255, 255, 255, 0) 75%);
+}
+
+.rmt {
+    position: absolute;
+    z-index: 10;
+    color: #6F8FAF;
+    font-size: 11pt;
+    bottom: 1px;
+    left: 42%;
+    right: 38%;
+}
+
 form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 30%;
-    background: #f1f1f1;
-    margin-top: 15px;
-    /* margin-left: 30px; */
-    justify-content: center;
+    border: 1px solid #343536;
+    width: 700px;
+    background: #1A1A1B;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 /* Style the submit button */
