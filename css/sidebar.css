@@ -203,3 +203,11 @@ input:checked+.slider:before {
     left: 10px;
     top: 20px;
 }
+
+.cancelButton:hover {
+    opacity: 0.8;
+}
+
+.cancelButton:active {
+    opacity: 1;
+}
